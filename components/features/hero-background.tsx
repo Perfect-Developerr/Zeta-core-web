@@ -5,7 +5,7 @@ import { Points, PointMaterial } from "@react-three/drei"
 import { useState, useRef } from "react"
 
 function StarField(props: any) {
-    const ref = useRef<any>()
+    const ref = useRef<any>(null)
     const [sphere] = useState(() => {
         // Generate random points in a sphere
         const count = 5000
@@ -34,7 +34,7 @@ function StarField(props: any) {
             <Points ref={ref} positions={sphere} stride={3} frustumCulled={false} {...props}>
                 <PointMaterial
                     transparent
-                    color="#8b5cf6" // Primary Purple
+                    color="#ffffff" // Space White
                     size={0.002}
                     sizeAttenuation={true}
                     depthWrite={false}
